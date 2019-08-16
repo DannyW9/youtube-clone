@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 
+import {SearchBar, VideoDetail, VideoList} from '../components'
+
 class MainContainer extends Component {
   render(){
     return(
       <div>
 
         <div id='nav'>
-          <h1> NAVBAR </h1>
+          <SearchBar/>
         </div>
 
         <div id='main'>
           <div id='video'>
-            <h1> VIDEO </h1>
+            <VideoDetail/>
           </div>
           <div id='list'>
-            <h1> VIDEO LIST </h1>
+            <VideoList/>
             <h2> Video 1</h2>
             <h2> Video 2</h2>
             <h2> Video 3</h2>
