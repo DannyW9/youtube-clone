@@ -16,7 +16,7 @@ class MainContainer extends Component {
   componentDidMount(){
     const request = new Request();
 
-    request.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=llama&key=AIzaSyDJ0rX4LcGGQK3etBW6RkVsZlHU9NXYOyo')
+    request.get('llama')
     .then((data) => {
       this.setState({videos: data.items, currentVideo: data.items[0]})
     })
