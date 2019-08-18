@@ -1,8 +1,28 @@
 import React, { Component } from 'react';
 
 import {SearchBar, VideoDetail, VideoList} from '../components/Index.js';
+import Request from '../helpers/Request.js';
 
 class MainContainer extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      videos: [],
+      currentVideo: null
+    }
+  }
+
+  componentDidMount(){
+    const request = new Request();
+
+    request.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=llama&key=AIzaSyDJ0rX4LcGGQK3etBW6RkVsZlHU9NXYOyo')
+    .then((data) => {
+      this.setState({videos: data.items, currentVideo: data.items[0]})
+    })
+
+  }
+
   render(){
     return(
       <div>
