@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {SearchBar, VideoDetail, VideoList} from '../components';
+import {SearchBar, VideoDetail, VideoList} from '../components/Index.js';
 
 class MainContainer extends Component {
   render(){
