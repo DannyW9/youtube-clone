@@ -5,7 +5,7 @@ class Request{
       params = {
         part: 'snippet',
         maxResults: 5,
-        key: 'AIzaSyDJ0rX4LcGGQK3etBW6RkVsZlHU9NXYOyo',
+        key: process.env.REACT_APP_API_KEY,
         q: searchTerm}
       Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
 
